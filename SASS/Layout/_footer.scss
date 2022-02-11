@@ -1,0 +1,9 @@
+footer {
+    background: #333333;
+    & ul {
+        color: white;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+}

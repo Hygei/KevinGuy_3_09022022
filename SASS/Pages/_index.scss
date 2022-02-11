@@ -1,0 +1,62 @@
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #d9d9d9;
+    &__icon {
+        position: relative;
+        right: 10px;
+    }
+}
+
+.quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #f2f2f2;
+}
+
+.functioning {
+    &__list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+}
+.restaurants {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f2f2;
+    & h2{
+        align-self: flex-start;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 350px;
+    margin:10px;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.03);
+        transition: 300ms;
+    }
+    & img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+    }
+    &__description {
+        background: white;
+        border-radius: 0 0 20px 20px;
+    }
+
+}
+

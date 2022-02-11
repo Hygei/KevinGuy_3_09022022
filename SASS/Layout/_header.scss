@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    &__logo{
+        height: 30px;
+    }
+    &__back{
+        position: absolute;
+        left: 20px;
+        font-size: 20px;
+    }
+}

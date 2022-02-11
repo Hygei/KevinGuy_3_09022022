@@ -1,0 +1,9 @@
+@mixin btn{
+    background: $colour-secondary;
+    background: linear-gradient(to bottom, $colour-secondary 0%, $colour-primary 100%);    
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.2);
+    color: white;
+}
