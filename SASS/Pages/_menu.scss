@@ -15,6 +15,11 @@
     top: -50px;
     margin: auto;
     max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    & .button{
+        align-self: center;
+    }
 }
 
 .menu {
@@ -27,7 +32,10 @@
         }
     }
     &__card {
+        @include shadow;
+        margin: 5px;
         width: 90%;
+        height: 70px;
         background: white;
         border-radius: 20px;
         display: flex;

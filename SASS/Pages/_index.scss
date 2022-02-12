@@ -3,10 +3,6 @@
     justify-content: center;
     align-items: center;
     background: #d9d9d9;
-    &__icon {
-        position: relative;
-        right: 10px;
-    }
 }
 
 .quote {
@@ -42,10 +38,12 @@
     width: 90%;
     max-width: 350px;
     margin:10px;
+    @include shadow;
     &:hover {
         cursor: pointer;
-        transform: scale(1.03);
+        transform: scale(1.02);
         transition: 300ms;
+        box-shadow:5px 5px 10px -3px $colour-primary;
     }
     & img {
         width: 100%;

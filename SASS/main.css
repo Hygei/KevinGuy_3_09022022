@@ -1,6 +1,11 @@
-h1, h2, h3, p {
+h1, h2 {
+  padding: 20px 5%;
+  margin: 0px;
+}
+
+h3, p {
   padding: 0 5%;
-  margin: 10px;
+  margin: 0px;
 }
 
 body {
@@ -9,6 +14,18 @@ body {
 
 h1 {
   font-family: "shrikhand", sans-serif;
+}
+
+.button {
+  background: #FF79DA;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  -webkit-box-shadow: 5px 5px 10px 0px #D9D9D9;
+  box-shadow: 5px 5px 10px 0px #D9D9D9;
 }
 
 .header {
@@ -38,6 +55,11 @@ footer {
   background: #333333;
 }
 
+footer h1 {
+  color: white;
+  font-size: 20px;
+}
+
 footer ul {
   color: white;
   list-style: none;
@@ -48,6 +70,17 @@ footer ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 0 5%;
+  margin: 0;
+}
+
+footer li {
+  margin: 5px 0;
+}
+
+footer li i {
+  width: 25px;
+  text-align: center;
 }
 
 .location {
@@ -61,11 +94,6 @@ footer ul {
       -ms-flex-align: center;
           align-items: center;
   background: #d9d9d9;
-}
-
-.location__icon {
-  position: relative;
-  right: 10px;
 }
 
 .quote {
@@ -128,14 +156,18 @@ footer ul {
   width: 90%;
   max-width: 350px;
   margin: 10px;
+  -webkit-box-shadow: 5px 5px 10px 0px #D9D9D9;
+  box-shadow: 5px 5px 10px 0px #D9D9D9;
 }
 
 .card:hover {
   cursor: pointer;
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
   -webkit-transition: 300ms;
   transition: 300ms;
+  -webkit-box-shadow: 5px 5px 10px -3px #9356DC;
+          box-shadow: 5px 5px 10px -3px #9356DC;
 }
 
 .card img {
@@ -170,6 +202,19 @@ footer ul {
   top: -50px;
   margin: auto;
   max-width: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content .button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .menu__cards {
@@ -191,7 +236,11 @@ footer ul {
 }
 
 .menu__card {
+  -webkit-box-shadow: 5px 5px 10px 0px #D9D9D9;
+  box-shadow: 5px 5px 10px 0px #D9D9D9;
+  margin: 5px;
   width: 90%;
+  height: 70px;
   background: white;
   border-radius: 20px;
   display: -webkit-box;

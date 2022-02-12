@@ -1,9 +1,15 @@
-@mixin btn{
+@mixin btn($colour-primary, $colour-secondary){
     background: $colour-secondary;
-    background: linear-gradient(to bottom, $colour-secondary 0%, $colour-primary 100%);    
+    background: -moz-linear-gradient(top, $colour-secondary 0%, $colour-primary 100%);
+    background: -webkit-linear-gradient(top, $colour-secondary 0%, $colour-primary 100%);
+    background: linear-gradient(to bottom, $colour-secondary 0%, $colour-primary 100%);  
     padding: 10px;
     border: none;
     border-radius: 25px;
-    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.2);
     color: white;
+}
+
+@mixin shadow {
+    -webkit-box-shadow: 5px 5px 10px 0px #D9D9D9; 
+    box-shadow: 5px 5px 10px 0px #D9D9D9;
 }

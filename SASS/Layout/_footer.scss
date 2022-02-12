@@ -1,9 +1,22 @@
 footer {
     background: #333333;
+    & h1 {
+        color: white;
+        font-size: 20px;
+    }
     & ul {
         color: white;
         list-style: none;
         display: flex;
         flex-direction: column;
+        padding: 0 5%;
+        margin: 0;
+    }
+    & li {
+        margin: 5px 0;
+        & i {
+            width: 25px;
+            text-align: center;
+        }
     }
 }
