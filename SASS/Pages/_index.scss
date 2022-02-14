@@ -10,7 +10,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background: #f2f2f2;
+    background: $background-colour-secondary;
 }
 
 .functioning {
@@ -19,6 +19,30 @@
         flex-direction: column;
         align-items: center;
         padding: 0;
+        list-style: none;
+    }
+    &__items{
+        background: $background-colour-secondary;
+        padding: 10px 25px;
+        margin: 15px;
+        border-radius: 20px;
+        @include shadow;
+        & i {
+            padding-right: 5px;
+        }
+       &::before {
+        border-radius: 20px;
+        background: red;
+        counter-reset: section;
+        content: counter(section, decimal);
+        counter-increment: section;
+        position: relative;
+        right: 30px;
+        padding: 5px;
+        height: 7px;
+        text-align: center;
+       }
+
     }
 }
 .restaurants {
@@ -54,6 +78,16 @@
     &__description {
         background: white;
         border-radius: 0 0 20px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__name {
+            width: 100%;
+        }
+        & i {
+            width: 50px;
+            text-align: center;
+        }
     }
 
 }

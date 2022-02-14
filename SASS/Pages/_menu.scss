@@ -8,21 +8,28 @@
     }
 }
 
-.content {
+
+.menu {
     background: #f2f2f2;
     border-radius: 20px 20px 0 0;
     position: relative;
     top: -50px;
     margin: auto;
+    margin-bottom: -50px;
     max-width: 1000px;
     display: flex;
     flex-direction: column;
-    & .button{
-        align-self: center;
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & i {
+            width: 50px;
+            text-align: center;
+            font-size: 25px;
+            margin-right: 5%;
+        }
     }
-}
-
-.menu {
     &__cards {
         display: flex;
         flex-direction: column;
@@ -42,7 +49,14 @@
         justify-content: space-between;
         align-items: center;
         &__name {
-            width: 100%;
+            width: 75%;
         }
+        &__price {
+            width: 50px;
+            text-align: center;
+        }
+    }
+    & .button{
+        align-self: center;
     }
 }
