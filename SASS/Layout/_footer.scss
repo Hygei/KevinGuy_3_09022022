@@ -1,11 +1,11 @@
 footer {
-    background: #333333;
+    background: darken($background-colour-secondary,80%);
     & h1 {
-        color: white;
+        color: $background-colour-primary;
         font-size: 20px;
     }
     & ul {
-        color: white;
+        color: $background-colour-primary;
         list-style: none;
         display: flex;
         flex-direction: column;

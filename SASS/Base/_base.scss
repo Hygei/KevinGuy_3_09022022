@@ -11,8 +11,13 @@ h1, h2 {
 h3, p {
     padding: 0 5%;
     margin: 0px;
+}
+
+.menu h3,.menu p {
+    padding: 0 0 0 5%;
+    margin: 0px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
+// mettre dans menu.scss

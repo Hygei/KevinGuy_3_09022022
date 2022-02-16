@@ -11,6 +11,11 @@ h1, h2 {
 h3, p {
   padding: 0 5%;
   margin: 0px;
+}
+
+.menu h3, .menu p {
+  padding: 0 0 0 5%;
+  margin: 0px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -33,6 +38,7 @@ h1 {
   border: none;
   border-radius: 25px;
   color: white;
+  cursor: pointer;
   -webkit-box-shadow: 5px 5px 10px 0px #D9D9D9;
   box-shadow: 5px 5px 10px 0px #D9D9D9;
 }
@@ -61,7 +67,7 @@ h1 {
 }
 
 footer {
-  background: #333333;
+  background: #262626;
 }
 
 footer h1 {
@@ -103,6 +109,14 @@ footer li i {
       -ms-flex-align: center;
           align-items: center;
   background: #d9d9d9;
+}
+
+.location p {
+  padding: 15px;
+}
+
+.location p i {
+  padding-right: 5px;
 }
 
 .quote {
@@ -150,7 +164,7 @@ footer li i {
 
 .functioning__items::before {
   border-radius: 20px;
-  background: red;
+  background: #FF79DA;
   counter-reset: section;
   content: counter(section, decimal);
   counter-increment: section;
@@ -233,8 +247,51 @@ footer li i {
 }
 
 .card__description i {
-  width: 50px;
+  font-size: 20px;
+  margin-right: 10px;
   text-align: center;
+}
+
+.heart__full {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  position: absolute;
+  right: 0px;
+}
+
+.heart__empty:hover + .heart__full {
+  -webkit-animation: grow 500ms ease-in-out both;
+          animation: grow 500ms ease-in-out both;
+}
+
+@-webkit-keyframes grow {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  80% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes grow {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  80% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .banner {
@@ -303,6 +360,14 @@ footer li i {
       align-self: flex-start;
 }
 
+.menu__cards h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: #99E2D0;
+}
+
 .menu__card {
   -webkit-box-shadow: 5px 5px 10px 0px #D9D9D9;
   box-shadow: 5px 5px 10px 0px #D9D9D9;
@@ -314,26 +379,78 @@ footer li i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .menu__card__name {
-  width: 75%;
+  width: 100%;
 }
 
 .menu__card__price {
-  width: 50px;
+  padding: 15px;
   text-align: center;
+}
+
+.menu__card__valid {
+  background: #99E2D0;
+  padding: 0 16px;
+  text-align: center;
+  border-radius: 0 20px 20px 0;
+  height: 100%;
+}
+
+.menu__card__valid i {
+  color: white;
+  font-size: 25px;
+  margin-top: 21px;
 }
 
 .menu .button {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+.card__slide--1 {
+  -webkit-animation: slide 1000ms ease-in-out both;
+          animation: slide 1000ms ease-in-out both;
+}
+
+.card__slide--2 {
+  -webkit-animation: slide 1000ms ease-in-out 500ms both;
+          animation: slide 1000ms ease-in-out 500ms both;
+}
+
+.card__slide--3 {
+  -webkit-animation: slide 1000ms ease-in-out 1000ms both;
+          animation: slide 1000ms ease-in-out 1000ms both;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  0% {
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -2,7 +2,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #d9d9d9;
+    background: darken($background-colour-secondary,10%);
+    & p{
+        padding: 15px;
+        & i {
+            padding-right: 5px;
+        }
+    }
 }
 
 .quote {
@@ -32,7 +38,7 @@
         }
        &::before {
         border-radius: 20px;
-        background: red;
+        background: $colour-secondary;
         counter-reset: section;
         content: counter(section, decimal);
         counter-increment: section;
@@ -49,7 +55,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f2f2f2;
+    background-color: $background-colour-secondary;
     & h2{
         align-self: flex-start;
     }
@@ -76,7 +82,7 @@
         border-radius: 20px 20px 0 0;
     }
     &__description {
-        background: white;
+        background: $background-colour-primary;
         border-radius: 0 0 20px 20px;
         display: flex;
         justify-content: space-between;
@@ -85,10 +91,35 @@
             width: 100%;
         }
         & i {
-            width: 50px;
-            text-align: center;
+            font-size: 20px;
+            margin-right: 10px;
+            text-align: center;            
         }
     }
-
+}
+.heart__full {
+    transform: scale(0);
+    position: absolute;
+    right: 0px;
 }
 
+
+.heart__empty {
+    &:hover + .heart__full {
+        animation: grow 500ms ease-in-out both;
+    }
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(0);
+    }
+
+    80% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
