@@ -420,6 +420,10 @@ footer li i {
   cursor: pointer;
 }
 
+.functioning__items:hover > i {
+  color: #9356DC;
+}
+
 .functioning__number {
   display: -webkit-box;
   display: -ms-flexbox;

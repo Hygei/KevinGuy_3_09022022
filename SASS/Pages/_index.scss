@@ -105,6 +105,9 @@
             background: lighten($colour-primary,35%);
             cursor: pointer;
             }
+        &:hover > i{
+            color: $colour-primary;
+        }
     }
     &__number {
         display: flex;
