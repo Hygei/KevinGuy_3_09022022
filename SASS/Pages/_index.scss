@@ -1,4 +1,64 @@
+// Loader
+.loader {
+    position: Fixed;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0.95;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: load 1s linear 3.6s both;
+    & .lettre {
+        color: $background-colour-secondary;
+        font-size: 15px;
+        letter-spacing: 15px;
+        animation: flash 1.2s linear infinite;
+        &:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+        &:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        &:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+        &:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+        &:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+        &:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+        &:nth-child(7) {
+            animation-delay: 0.7s;
+        }
+        &:nth-child(8) {
+            animation-delay: 0.8s;
+        }
+        &:nth-child(9) {
+            animation-delay: 0.9s;
+        }
+        &:nth-child(10) {
+            animation-delay: 1s;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+// Page
 .location {
+    -webkit-box-shadow: inset 0px 11px 15px 0px rgba(191,191,191,0.75); 
+    box-shadow: inset 0px 11px 15px 0px rgba(191,191,191,0.75);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,36 +88,53 @@
         list-style: none;
     }
     &__items{
+        display: flex;
+        align-items: center;
         background: $background-colour-secondary;
-        padding: 10px 25px;
+        font-weight: bold;
+        width: 260px;
+        height: 60px;
         margin: 15px;
         border-radius: 20px;
         @include shadow;
-        & i {
-            padding-right: 5px;
+        & i{
+            padding: 0 20px 0px 12px;
+            color: darken($background-colour-secondary, 50%);
         }
-       &::before {
+        &:hover{
+            background: lighten($colour-primary,35%);
+            cursor: pointer;
+            }
+    }
+    &__number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
         border-radius: 20px;
-        background: $colour-secondary;
-        counter-reset: section;
-        content: counter(section, decimal);
-        counter-increment: section;
+        background: $colour-primary;
+        color:white;
         position: relative;
-        right: 30px;
-        padding: 5px;
-        height: 7px;
-        text-align: center;
-       }
-
+        right:10px;
+        font-size: 12px;
     }
 }
+
 .restaurants {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: $background-colour-secondary;
+    padding-bottom: 30px;
     & h2{
         align-self: flex-start;
+    }
+    &__cards{
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
@@ -69,6 +146,18 @@
     max-width: 350px;
     margin:10px;
     @include shadow;
+    .new {
+        background: $colour-tertiary;
+        color: darken($colour-tertiary,40%);
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 30%;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     &:hover {
         cursor: pointer;
         transform: scale(1.02);
@@ -87,6 +176,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: 60px;
         &__name {
             width: 100%;
         }
@@ -97,29 +187,44 @@
         }
     }
 }
+
+
 .heart__full {
     transform: scale(0);
     position: absolute;
     right: 0px;
+    pointer-events: none;
 }
-
-
 .heart__empty {
     &:hover + .heart__full {
-        animation: grow 500ms ease-in-out both;
+    animation: grow 500ms ease-in-out both;
+    color:transparent;
+    @include gradiant;
     }
 }
 
-@keyframes grow {
-    0% {
-        transform: scale(0);
+// Media Queries 
+@media only screen and (min-width : 550px) {
+    .loader .lettre{
+        font-size: 50px;
+    }
+}
+
+@media only screen and (min-width : 1240px) {
+    .loader .lettre {
+        font-size: 80px;
+    }
+    .functioning {
+        &__list {
+        flex-direction: row;
+        justify-content: center;
+        }
+        &__items {
+            margin: 25px;
+        }
     }
 
-    80% {
-        transform: scale(1.2);
-    }
-
-    100% {
-        transform: scale(1);
-    }
+    .restaurants__cards {
+        flex-wrap: nowrap ;
+       }
 }

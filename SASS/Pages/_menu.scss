@@ -29,6 +29,19 @@
             font-size: 25px;
             margin-right: 5%;
         }
+        & .heart__full {
+            transform: scale(0);
+            position: absolute;
+            right: 0px;
+            pointer-events: none;
+        }
+        & .heart__empty {
+            &:hover + .heart__full {
+            animation: grow 500ms ease-in-out both;
+            color:transparent;
+            @include gradiant;
+            }
+        }
     }
     &__cards {
         display: flex;
@@ -54,12 +67,25 @@
         border-radius: 20px;
         display: flex;
         align-items: center;
+        cursor: pointer;
+        overflow: hidden;
+        &__desc {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+        }
         &__name {
             width: 100%;
+            overflow: hidden;
         }
         &__price {
             padding: 15px;
             text-align: center;
+            transform: translateX(60px);
+            position: absolute;
+            right: 65px;
+            top: 11px;
         }
         &__valid {
             background: $colour-tertiary;
@@ -67,17 +93,33 @@
             text-align: center;
             border-radius: 0 20px 20px 0;
             height: 100%;
+            transform: translateX(60px);
             & i {
+                transform: rotate(0deg);
                 color: $background-colour-primary;
                 font-size: 25px;
                 margin-top: 21px;
             }
+        }
+        &:hover > .menu__card__valid{
+            transform: translateX(0);
+            transition: 1s ease;
+        }
+        &:hover > .menu__card__price{
+            position: inherit;
+            transform: translateX(0);
+            transition: 1s ease;
+        }
+        &:hover > .menu__card__valid i{
+            transform: rotate(360deg);
+            transition: 750ms ease;
         }
     }
     & .button{
         align-self: center;
     }
 }
+
 
 
 
@@ -91,6 +133,9 @@
         }
         &--3{
             animation: slide 1000ms ease-in-out 1000ms both;
+        }
+        &--4{
+            animation: slide 1000ms ease-in-out 1500ms both;
         }
     }
 }

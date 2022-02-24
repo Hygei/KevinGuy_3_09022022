@@ -20,3 +20,17 @@ footer {
         }
     }
 }
+
+// Media Queries
+
+@media only screen and (min-width : 1024px) {
+   footer {
+       & ul {
+           flex-direction: row;
+           justify-content: space-around;
+           padding: inherit;
+           padding-bottom: 50px;
+           margin: 0 10%;
+       }
+   }
+}

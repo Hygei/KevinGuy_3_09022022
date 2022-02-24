@@ -15,3 +15,13 @@
     -webkit-box-shadow: 5px 5px 10px 0px #D9D9D9; 
     box-shadow: 5px 5px 10px 0px #D9D9D9;
 }
+
+@mixin gradiant {
+    background: $colour-secondary;
+    background: -moz-linear-gradient(54deg, $colour-secondary 0%, $colour-primary 100%);
+    background: -webkit-linear-gradient(54deg, $colour-secondary 0%, $colour-primary 100%);
+    background: linear-gradient(54deg, $colour-secondary 0%, $colour-primary 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+}
