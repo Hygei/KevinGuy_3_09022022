@@ -149,6 +149,7 @@
     max-width: 350px;
     margin:10px;
     @include shadow;
+    position: relative;
     .new {
         background: $colour-tertiary;
         color: darken($colour-tertiary,40%);
