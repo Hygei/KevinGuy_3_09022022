@@ -279,8 +279,8 @@ footer li i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: load 1s linear 3.6s both;
-          animation: load 1s linear 3.6s both;
+  -webkit-animation: load 1s linear 2s both;
+          animation: load 1s linear 2s both;
 }
 
 .loader .lettre {
