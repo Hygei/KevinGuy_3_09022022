@@ -1,4 +1,9 @@
 .button {
     @include btn($colour-primary, $colour-secondary);
     @include shadow;
+    &:hover{
+        opacity: 0.8;
+        transition: .3s;
+        box-shadow: 5px 5px 10px 0px #a6a6a6;
+        }
 }
