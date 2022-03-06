@@ -156,7 +156,7 @@ h3, p {
 }
 
 .menu h3 {
-  padding: 0 0 0 5%;
+  padding: 0 0 0 25px;
   margin: 0px;
   white-space: nowrap;
   overflow: hidden;
@@ -164,7 +164,7 @@ h3, p {
 }
 
 .menu p {
-  padding: 0 0 0 5%;
+  padding: 0 0 0 25px;
   margin: 0px;
   white-space: nowrap;
   overflow: hidden;
@@ -192,6 +192,14 @@ h1 {
   cursor: pointer;
   -webkit-box-shadow: 5px 5px 10px 0px #D9D9D9;
   box-shadow: 5px 5px 10px 0px #D9D9D9;
+}
+
+.button:hover {
+  opacity: 0.8;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-box-shadow: 5px 5px 10px 0px #a6a6a6;
+          box-shadow: 5px 5px 10px 0px #a6a6a6;
 }
 
 .header {
@@ -705,21 +713,13 @@ footer li i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
-  overflow: hidden;
-}
-
-.menu__card__desc {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   overflow: hidden;
 }
 
@@ -728,24 +728,26 @@ footer li i {
   overflow: hidden;
 }
 
+.menu__card__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: -50px;
+}
+
 .menu__card__price {
-  padding: 15px;
+  width: 50px;
   text-align: center;
-  -webkit-transform: translateX(60px);
-          transform: translateX(60px);
-  position: absolute;
-  right: 65px;
-  top: 11px;
 }
 
 .menu__card__valid {
   background: #99E2D0;
-  padding: 0 16px;
+  width: 50px;
+  height: 70px;
   text-align: center;
-  border-radius: 0 20px 20px 0;
-  height: 100%;
-  -webkit-transform: translateX(60px);
-          transform: translateX(60px);
 }
 
 .menu__card__valid i {
@@ -756,22 +758,13 @@ footer li i {
   margin-top: 21px;
 }
 
-.menu__card:hover > .menu__card__valid {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+.menu__card:hover > .menu__card__right {
+  margin-right: 0;
   -webkit-transition: 1s ease;
   transition: 1s ease;
 }
 
-.menu__card:hover > .menu__card__price {
-  position: inherit;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-.menu__card:hover > .menu__card__valid i {
+.menu__card:hover > .menu__card__right i {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
   -webkit-transition: 750ms ease;

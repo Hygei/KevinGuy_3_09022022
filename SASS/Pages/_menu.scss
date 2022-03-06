@@ -66,34 +66,28 @@
         background: $background-colour-primary;
         border-radius: 20px;
         display: flex;
+        justify-content: space-between;
         align-items: center;
         cursor: pointer;
         overflow: hidden;
-        &__desc {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            overflow: hidden;
-        }
         &__name {
             width: 100%;
             overflow: hidden;
         }
+        &__right {
+            display: flex;
+            align-items: center;
+            margin-right: -50px;
+        }
         &__price {
-            padding: 15px;
+            width: 50px;
             text-align: center;
-            transform: translateX(60px);
-            position: absolute;
-            right: 65px;
-            top: 11px;
         }
         &__valid {
             background: $colour-tertiary;
-            padding: 0 16px;
+            width: 50px;
+            height: 70px;
             text-align: center;
-            border-radius: 0 20px 20px 0;
-            height: 100%;
-            transform: translateX(60px);
             & i {
                 transform: rotate(0deg);
                 color: $background-colour-primary;
@@ -101,16 +95,11 @@
                 margin-top: 21px;
             }
         }
-        &:hover > .menu__card__valid{
-            transform: translateX(0);
+        &:hover > .menu__card__right{
+            margin-right: 0;
             transition: 1s ease;
         }
-        &:hover > .menu__card__price{
-            position: inherit;
-            transform: translateX(0);
-            transition: 1s ease;
-        }
-        &:hover > .menu__card__valid i{
+        &:hover > .menu__card__right i{
             transform: rotate(360deg);
             transition: 750ms ease;
         }
